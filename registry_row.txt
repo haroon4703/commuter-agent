@@ -1,0 +1,11 @@
+Agent Name: Commuter Assistance Agent
+Agent ID / Section: commuter_agent_01 / Section F
+Agent Description: Provides optimal route recommendations, traffic updates, and travel mode suggestions based on user queries.
+API Endpoint URL: https://commuter-agent-demo.digitalocean.app/agent
+Handshake Method: POST /agent (Standard Unified Request)
+Capabilities: Route Planning, Traffic Analysis, Travel Mode Suggestion
+Input Format: JSON (Unified Request Format - see response2.jpeg)
+Output Format: JSON (Unified Response Format - see response1.jpeg)
+Dependencies: Google Maps API (Mocked), Traffic Data Provider
+Maintainer Name & Roll Number: Haroon Rasheed (22i-2555), Hammad Ur Rehman (22i-2662)
+Last Updated: 2025-11-20
