@@ -6,7 +6,7 @@ colorTo: green
 sdk: docker
 pinned: false
 license: apache-2.0
-short_description: AI agent for route planning, traffic updates, and travel suggestions
+short_description: AI agent for route planning and traffic updates
 ---
 
 # Commuter Assistance Agent
