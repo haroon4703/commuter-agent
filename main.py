@@ -17,6 +17,22 @@ async def lifespan(app: FastAPI):
 
 app = FastAPI(title=Config.AGENT_NAME, lifespan=lifespan)
 
+@app.get("/")
+def root():
+    """
+    Root endpoint providing API information.
+    """
+    return {
+        "agent_name": "commuter-agent",
+        "status": "running",
+        "version": "1.0.0",
+        "endpoints": {
+            "health": "/health",
+            "agent": "/commuter-agent"
+        },
+        "description": "AI Commuter Assistance Agent - Provides route planning, traffic updates, and travel mode suggestions"
+    }
+
 @app.post("/commuter-agent", response_model=AgentResponse)
 async def agent_endpoint(request: AgentRequest):
     """
