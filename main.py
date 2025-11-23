@@ -33,6 +33,43 @@ def root():
         "description": "AI Commuter Assistance Agent - Provides route planning, traffic updates, and travel mode suggestions"
     }
 
+@app.get("/commuter-agent")
+def agent_endpoint_info():
+    """
+    GET endpoint providing information about how to use the agent endpoint.
+    """
+    return {
+        "message": "This endpoint requires a POST request",
+        "method": "POST",
+        "endpoint": "/commuter-agent",
+        "content_type": "application/json",
+        "request_format": {
+            "messages": [
+                {
+                    "role": "user",
+                    "content": "Your query here"
+                }
+            ]
+        },
+        "example": {
+            "messages": [
+                {
+                    "role": "user",
+                    "content": "What's the best route to downtown?"
+                }
+            ]
+        },
+        "response_format": {
+            "agent_name": "commuter-agent",
+            "status": "success",
+            "data": {
+                "message": "Response data here"
+            },
+            "error_message": None
+        },
+        "test_with_curl": 'curl -X POST "https://haroon4703-commuter-agent.hf.space/commuter-agent" -H "Content-Type: application/json" -d \'{"messages": [{"role": "user", "content": "What is the traffic like?"}]}\''
+    }
+
 @app.post("/commuter-agent", response_model=AgentResponse)
 async def agent_endpoint(request: AgentRequest):
     """
