@@ -1,3 +1,14 @@
+---
+title: Commuter Agent
+emoji: 🚗
+colorFrom: blue
+colorTo: green
+sdk: docker
+pinned: false
+license: apache-2.0
+short_description: An AI agent that provides intelligent commuter assistance including route planning, traffic updates, and travel mode suggestions.
+---
+
 # Commuter Assistance Agent
 
 ## Overview
